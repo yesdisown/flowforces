@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>FlowForces</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div id="intro"><div id="iword"></div><div id="inum">0</div></div>
+ <div id="cele"><div id="cw"></div><div><div id="cn">0:00</div><div id="cd"></div></div></div>
+ <div id="toast"></div>
+ <div id="pausev"><b>Paused</b><button class="solid" id="resume">Resume</button><button id="msolve">Mark solved</button><button id="stop">End session</button></div>
+ <div id="sprog"></div>
+
+ <main>
+ <section id="home">
+  <input id="handle" placeholder="handle" autocomplete="off" spellcheck="false" autofocus>
+  <div id="conn"><i></i></div>
+  <div id="msg"></div>
+  <div id="rest" class="hide">
+   <div class="pair">
+    <div class="rv" style="--i:0"><div class="lab">Minutes</div><div id="g-dur"><span class="opt" data-v="30">30</span><span class="opt on" data-v="60">60</span><span class="opt" data-v="90">90</span><span class="opt" data-v="120">120</span></div></div>
+    <div class="rv" style="--i:1"><div class="lab">Solve chance</div><div id="g-st"><span class="opt" data-v="-150">70%</span><span class="opt on" data-v="0">50%</span><span class="opt" data-v="150">30%</span></div></div>
+    <div class="rv" style="--i:2"><div class="lab">Warm-up</div><div id="g-warm"><span class="opt on" data-v="1">on</span><span class="opt" data-v="0">off</span></div></div>
+   </div>
+   <div class="lab rv" style="--i:3">Topics <span id="tcount">auto</span></div>
+   <div id="g-topics"></div>
+   <div class="startrow rv" style="--i:8;margin-top:40px"><button class="solid" id="go">Start</button><button id="notify">notify me</button></div>
+  </div>
+ </section>
+
+ <section id="bl" class="hide">
+  <div class="lab" style="margin-top:0">To upsolve <span id="blc"></span></div>
+  <div id="bllist"></div>
+  <div class="acts" style="margin-top:56px"><button id="blback">Back</button></div>
+ </section>
+
+ <section id="zen" class="hide">
+  <div class="zhead"><div class="clock" id="clock">0:00</div><div class="zcount"><b id="zs">0</b>solved</div></div>
+  <div class="live" id="live"><span id="livedone"></span><span id="livecur"></span><div id="liveticks"></div></div>
+  <div class="zmid"><a class="pname" id="plink" target="_blank" rel="noopener"></a><div class="ptime" id="ptime"><span id="pel">0:00</span><span id="pw"></span></div></div>
+  <div class="acts"><button id="skip">Skip</button><button id="pause">Pause</button></div>
+ </section>
+
+ <section id="end" class="hide"><div id="endcard"></div></section>
+ </main>
+
+ <button id="wipe">delete my data</button>
+ <div id="blwrap" style="display:none"><button id="blbtn">to upsolve</button></div>
+
+ <script src="core.js"></script>
+ <script src="session.js"></script>
+ <script src="summary.js"></script>
+ <script src="app.js"></script>
+</body>
+</html>
